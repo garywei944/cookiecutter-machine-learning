@@ -37,10 +37,10 @@ from [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-
 │   ├── latest.yml
 │   └── toy.yml
 ├── data                                    >> data directory
-│   ├── external                      >> external data
-│   ├── interim                       >> intermedia, temporary data
-│   ├── processed                     >> generated, final dataset
-│   └── raw                           >> immutable raw data
+│   ├── external                            >> external data
+│   ├── interim                             >> intermedia, temporary data
+│   ├── processed                           >> generated, final dataset
+│   └── raw                                 >> immutable raw data
 ├── environment.yml                         >> python package dependencies
 ├── LICENSE                                 >> LICENSE
 ├── Makefile                                >> some useful commands
