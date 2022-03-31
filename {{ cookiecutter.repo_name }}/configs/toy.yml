@@ -1,0 +1,16 @@
+CONFIG_NAME: 'toy'
+MODEL_NAME: 't5-base'
+
+N_JOBS: 1
+USE_CUDA: True
+
+# Where processed data will be saved
+data_path: 'data/processed/toy'
+
+task: 2
+n_quick_ranks: 3
+sim_ranking: True
+n_defs: 3
+load_checkpoints: True
+
+n_rows: 200

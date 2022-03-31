@@ -1,0 +1,7 @@
+CONFIG_NAME: 'latest'
+MODEL_NAME: 't5-base'
+
+# Where processed data will be saved
+data_path: 'data/processed/latest'
+
+n_rows: ~

@@ -1,0 +1,36 @@
+# Typical conda environment for a reproducible machine learning project
+# Use `mamba env create -f environment.yml`
+# or `conda env create -f environment.yml` to install the environment
+# Created and maintained by garywei944(garywei944@gmail.com)
+
+name: {{ cookiecutter.env_name }}
+channels:
+  - nvidia  # for CUDA
+  - pytorch
+  - huggingface
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pip
+  - pytorch
+  - cudatoolkit=11.3
+  - psutil
+  - numpy
+  - pandas
+  - openpyxl  # to open excel files
+  - pandarallel  # for parallel computing panda dataframe
+  - python-dotenv
+  - ruamel.yaml
+
+  # Development
+  - jupyter
+  - ipykernel=6.2.0  # https://youtrack.jetbrains.com/issue/PY-43337
+  - click
+  - wandb
+
+#  # If you need to install pip packages, don't do `pip install xxx`
+#  # Add the package here and run `mamba env update -f environment.yml --prune`
+#  # for dependency completeness.
+#  - pip:
+#      - lorem

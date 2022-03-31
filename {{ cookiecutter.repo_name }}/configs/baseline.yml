@@ -1,0 +1,41 @@
+CONFIG_NAME: 'baseline'
+MODEL_NAME: 't5-base'
+
+# Set SEED to null(~) make every step random and unreproducible
+SEED: 42
+# Number of cpu cores to use, -1 uses all cpu's
+N_JOBS: -1
+
+# Where processed data will be saved
+data_path: 'data/processed/baseline'
+
+n_rows: ~
+split_train_val: True
+train_ratio: .8
+val_ratio: .2
+save_hf_dataset: False
+load_from_cache_file: False
+
+## General Trainer arguments
+#model: 'baseline'
+#tokenizer: ~
+#max_length: 512
+#checkpoints_path: 'checkpoints'
+#train_batch_size: 2
+#eval_batch_size: 8
+#learning_rate: 1e-6
+#weight_decay: 0.01
+#epochs: 50
+#
+## Huggingface trainer arguments
+#evaluation_strategy: 'epoch'
+#logging_strategy: 'steps'
+#logging_first_step: True
+#logging_steps: 0
+#save_strategy: 'steps' # ignored since load_best_model_at_end is True
+#save_steps: 5000 # ignored since load_best_model_at_end is True
+#save_total_limit: 2
+#disable_tqdm: False
+#load_best_model_at_end: True
+#metric_for_best_model: 'loss'
+#skip_memory_metrics: False
