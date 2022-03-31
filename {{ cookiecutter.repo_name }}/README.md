@@ -48,5 +48,5 @@ placed there.
 ---
 
 Project based on
-the [cookiecutter data science project template](https://drivendata.github.io/cookiecutter-data-science/)
-. #cookiecutterdatascience
+the [cookiecutter machine learning template](https://github.com/garywei944/cookiecutter-machine-learning)
+.
