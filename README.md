@@ -23,8 +23,8 @@ cookiecutter gh:garywei944/cookiecutter-machine-learning
 
 ## Directory structure
 
-The directory structure is developed
-from [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
+The directory structure is inspired
+by [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
 .
 
 ```text
