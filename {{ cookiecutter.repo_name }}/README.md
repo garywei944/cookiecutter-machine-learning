@@ -6,8 +6,9 @@
 
 ## Notebooks
 
-- Notebooks for experiments are located under `notebooks`.
-- Notebooks for visualization and presentation are located under `references`.
+- Notebooks for experiments are located under [`notebooks`](notebooks).
+- Notebooks for visualization and presentation are located
+  under [`references`](references).
 
 ## Conda / Mamba Environment Setup
 
