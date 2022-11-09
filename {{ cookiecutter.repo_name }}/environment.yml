@@ -17,6 +17,7 @@ dependencies:
   - cudatoolkit=11
   - psutil
   - numpy
+  - scipy
   - pandas
   - openpyxl  # to open excel files
   - pandarallel  # for parallel computing panda dataframe
