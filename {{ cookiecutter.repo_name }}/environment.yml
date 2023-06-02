@@ -5,25 +5,48 @@
 
 name: {{ cookiecutter.env_name }}
 channels:
-  - nvidia  # for CUDA
+  - nvidia # for CUDA
   - pytorch
   - huggingface
   - conda-forge
+  - anaconda
   - defaults
 dependencies:
-  - python=3.8
+  - python
   - pip
-  - pytorch
-  - cudatoolkit=11
+  - cudatoolkit
+  - pytorch-cuda
   - psutil
-  - numpy
-  - scipy
-  - pandas
-  - openpyxl  # to open excel files
-  - pandarallel  # for parallel computing panda dataframe
   - python-dotenv
   - ruamel.yaml
   - tqdm
+
+  # Frameworks
+  - numpy
+  - scipy
+  - pandas
+  - openpyxl # to open excel files
+  - pandarallel # for parallel computing panda dataframe
+
+  # scikit-learn
+  - scikit-learn
+  - scikit-image
+
+  # PyTorch
+  - pytorch
+  - torchvision
+
+  # Huggingface
+  - transformers
+  - datasets
+  - accelerate
+  - tokenizers>=0.13.1  # https://stackoverflow.com/a/74386742
+
+  # utils
+  - absl-py
+  - torchmetrics
+  - torchinfo
+  - bayesian-optimization
 
   # Visualization
   - matplotlib
@@ -32,9 +55,13 @@ dependencies:
   - jupyter
   - click
   - wandb
+  - twine
 
-#  # If you need to install pip packages, don't do `pip install xxx`
-#  # Add the package here and run `mamba env update -f environment.yml --prune`
-#  # for dependency completeness.
-#  - pip:
-#      - singleton-decorator
+  # If you need to install pip packages, don't do `pip install xxx`
+  # Add the package here and run `mamba env update -f environment.yml --prune`
+  # for dependency completeness.
+  - pip:
+      - build
+      - singleton-decorator
+      - torchopt
+      - evaluate
