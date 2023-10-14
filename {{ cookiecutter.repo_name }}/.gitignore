@@ -1,4 +1,5 @@
 .idea
+wandb/
 
 # ignore files under data/
 # files should not be uploaded to GitHub, etc
