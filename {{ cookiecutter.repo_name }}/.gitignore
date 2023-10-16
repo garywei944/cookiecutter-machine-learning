@@ -1,14 +1,15 @@
-.idea
-wandb/
-
-# ignore files under data/
+# ignore all files that's not source code
 # files should not be uploaded to GitHub, etc
+.idea
+checkpoints/*
 data/*
 !data/*/
 data/*/*
 logs/*
-*.zip
+wandb/
 
+
+*.zip
 *.csv
 
 ### Python template
