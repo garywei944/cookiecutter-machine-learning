@@ -1,5 +1,3 @@
-.PHONY: clean lint install
-
 #################################################################################
 # GLOBALS                                                                       #
 #################################################################################
@@ -14,17 +12,27 @@ PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 ## Install environment
 install:
 	@echo "Please refer to the instructions in README"  # TODO: make install.sh script if necessary
+.PHONY: install
 
 ## Delete all compiled Python files
 clean:
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
+.PHONY: clean
+
+lint/flake8: ## check style with flake8
+	flake8 --exclude=docs/conf.py .
+lint/black: ## check style with black
+	black --check --diff .
+
+## Lint using flake8 and black
+lint: lint/flake8 lint/black ## check style
+.PHONY: lint lint/flake8 lint/black
 
 
 #################################################################################
 # PROJECT RULES                                                                 #
 #################################################################################
-
 
 
 #################################################################################
