@@ -3,7 +3,7 @@
 # or `conda env create -f environment.yml` to install the environment
 # Created and maintained by garywei944(garywei944@gmail.com)
 
-name: {{ cookiecutter.env_name }}
+name: { { cookiecutter.env_name } }
 channels:
   - pyg # for pytorch-sparse
   - nvidia # for CUDA
@@ -18,7 +18,7 @@ dependencies:
   - cython
   - cudatoolkit
   - pytorch-cuda
-  - cudnn  # https://docs.nvidia.com/deeplearning/cudnn/support-matrix/index.html
+  - cudnn # https://docs.nvidia.com/deeplearning/cudnn/support-matrix/index.html
   - psutil
   - python-dotenv
   - ruamel.yaml
@@ -44,7 +44,7 @@ dependencies:
   - transformers
   - datasets
   - accelerate
-  - tokenizers>=0.13.1  # https://stackoverflow.com/a/74386742
+  - tokenizers>=0.13.1 # https://stackoverflow.com/a/74386742
 
   # utils
   - absl-py
@@ -57,6 +57,7 @@ dependencies:
   - matplotlib
   - seaborn
   - moviepy # for generating gif
+  - tabulate # for printing table
 
   # Development
   - jupyter
@@ -87,3 +88,4 @@ dependencies:
       - evaluate
       - peft
       - separableconv-torch
+      - cd2root
