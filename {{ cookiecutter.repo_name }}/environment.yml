@@ -4,7 +4,6 @@
 # Created and maintained by garywei944(garywei944@gmail.com)
 
 name: {{ cookiecutter.env_name }}
-
 channels:
   - nvidia # for CUDA
   - pytorch
