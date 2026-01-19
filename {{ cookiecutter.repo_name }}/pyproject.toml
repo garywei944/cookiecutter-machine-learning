@@ -18,10 +18,10 @@ select = ["E", "F", "I"]
 ignore = []
 
 [tool.ruff.lint.isort]
-known-first-party = ["{{ cookiecutter.package_name }}"]
+known-first-party = ["{{ cookiecutter.project_name }}"]
 
 [tool.ruff.lint.per-file-ignores]
-"{{ cookiecutter.package_name }}/__main__.py" = ["E402"]
+"{{ cookiecutter.project_name }}/__main__.py" = ["E402"]
 
 # ---------------- mypy ----------------
 [tool.mypy]
