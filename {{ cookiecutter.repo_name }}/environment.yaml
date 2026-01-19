@@ -3,7 +3,7 @@
 # or `conda env create -f environment.yml` to install the environment
 # Created and maintained by garywei944(garywei944@gmail.com)
 
-name: {{ cookiecutter.env_name }}
+name: "{{ cookiecutter.env_name }}"
 channels:
   - nvidia # for CUDA
   - pytorch
@@ -13,7 +13,7 @@ channels:
   - anaconda
   - defaults
 dependencies:
-  - python>=3.12
+  - python>=3.13
   - pip>=24.0
   - cython
   - pocl # for OpenCL
@@ -120,10 +120,5 @@ dependencies:
   # for dependency completeness.
   - pip:
       - build
-      - datargs
       - sh>=2.2.2
-      - morecontext
       - arxiv-latex-cleaner
-      - torchopt
-      - torch_optimizer
-      - separableconv-torch
