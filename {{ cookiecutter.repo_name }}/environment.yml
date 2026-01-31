@@ -23,8 +23,8 @@ dependencies:
   - nvtop
 
   # Nvidia cuda drivers
-  - nvidia/label/cuda-12.9.0::cuda
-  - nvidia/label/cudnn-9.3.0::cudnn
+  - nvidia::cuda
+  - nvidia::cudnn
   - conda-forge::nccl
 
   # essential functionality
@@ -67,6 +67,7 @@ dependencies:
   # scikit-learn
   - scikit-learn
   - scikit-image
+  - networkx
 
   # PyTorch
   - torchinfo
@@ -84,11 +85,13 @@ dependencies:
 
   # utils
   - bayesian-optimization
-  - singleton-decorator
   - questionary
   - distro
-  - pyprojroot
   - httpie
+  - httpx
+  - atomicwrites
+  - aiorwlock
+  - pyzipper
 
   # Visualization
   - matplotlib
@@ -101,19 +104,23 @@ dependencies:
   - tensorboardx
 
   # PyPI common practice
-  - click
   - setuptools_scm
   - twine # for uploading to pypi
+  - ruff
   - blackd # black daemon, for python formatting
   - mypy # for type checking
   - bump2version # for version bump
   - watchdog # filesystem event
-  - flake8 # linter
-  - tox
-  - coverage
   - sphinx # doc
   - pre-commit # for git hooks
+  - identify>=2.6.15
   - pytest
+  - pytest-asyncio
+  - pytest-cov
+  - pytest-forked
+  - pytest-mock
+  - pytest-subtests
+  - pytest-xdist
 
   # If you need to install pip packages, don't do `pip install xxx`
   # Add the package here and run `mamba env update -f environment.yml --prune`
@@ -121,4 +128,5 @@ dependencies:
   - pip:
       - build
       - sh>=2.2.2
+      - py-dagviz
       - arxiv-latex-cleaner
